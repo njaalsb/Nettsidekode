@@ -14,7 +14,7 @@ if (file_exists($jsonFile)) {
     <title>Mitt dashbord:</title>
 </head>
 <body>
-// Bilde legges inn
+    <!-- Bilde legges inn -->
     <h3>Min side:</h3>
     <img src="/BIELSYS.png" alt="Image" width="300">
 </body>
@@ -23,7 +23,7 @@ if (file_exists($jsonFile)) {
 </html>
 
 <head>
-// Charset bestemmer hvordan karakterer skal kodes i HTML-dokumentet
+<!-- Charset bestemmer hvordan karakterer skal kodes i HTML-dokumentet -->
     <meta charset="UTF-8">
     <title>Mitt Dashboard</title>
     <style>
@@ -41,11 +41,11 @@ if (file_exists($jsonFile)) {
     </style>
 </head>
 <body>
-    // Overskrift
+    <!-- Overskrift -->
     <h1>Mitt dashbord</h1>
     <table>
         <thead>
-            // Genererer den øverste radene i tabellen
+            <!-- Genererer den øverste radene i tabellen -->
             <tr>
                 <th>Tidspunkt</th>
                 <th>Beløp</th>
@@ -60,11 +60,12 @@ if (file_exists($jsonFile)) {
             }
             setInterval('autoRefresh()', 50000);
         </script>
-        // Denne koden bruker $data-variabelen til å legge til rader i tabellen
+        <!-- Denne koden bruker $data-variabelen til å legge til rader i tabellen -->
         <?php if (!empty($data)): ?>
-            // For each funksjonen itererer gjennom verdiene i $data og legger de til
+            <!-- For each funksjonen itererer gjennom verdiene i $data og legger de til -->
             <?php foreach ($data as $row): ?>
-                <tr> // Bruker 'tidspunkt', 'belop' og 'Biltype' for å plassere verdiene i riktig kolonne
+                <!-- Bruker 'tidspunkt', 'belop' og 'Biltype' for å plassere verdiene i riktig kolonne -->
+                <tr> 
                     <td><?php echo htmlspecialchars($row['tidspunkt']); ?></td>
                     <td><?php echo htmlspecialchars($row['belop']); ?> kr</td>
                     <td><?php echo htmlspecialchars($row['Biltype']); ?></td>
